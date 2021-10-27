@@ -1,0 +1,2 @@
+version=3
+https://pear.php.net/package/Mail/download http://download.pear.php.net/package/Mail-([\d.]+)\.tgz

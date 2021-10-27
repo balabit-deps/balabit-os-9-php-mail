@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=phppear --with phppear
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	cd Mail-* && pear run-tests -r tests
+else
+	@echo "** tests disabled"
+endif

@@ -1,0 +1,26 @@
+Source: php-mail
+Section: php
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Uploaders: Thomas Goirand <zigo@debian.org>,
+           Prach Pongpanich <prach@debian.org>,
+           Dmitry Smirnov <onlyjob@debian.org>,
+Build-Depends: debhelper-compat (= 12),
+               php-net-smtp,
+               php-pear,
+               pkg-php-tools (>= 1.32)
+Vcs-Browser: https://salsa.debian.org/php-team/pear/php-mail
+Vcs-Git: https://salsa.debian.org/php-team/pear/php-mail.git
+Homepage: https://pear.php.net/package/Mail
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+
+Package: php-mail
+Architecture: all
+Depends: ${misc:Depends},
+         ${phppear:Debian-Depends}
+Recommends: ${phppear:Debian-Recommends}
+Breaks: ${phppear:Debian-Breaks}
+Description: ${phppear:summary}
+ ${phppear:description}

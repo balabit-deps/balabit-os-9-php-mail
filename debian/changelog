@@ -1,0 +1,144 @@
+php-mail (1.4.1-1ubuntu2) jammy; urgency=medium
+
+  * No change rebuild for PHP 8.1
+
+ -- Bryce Harrington <bryce@canonical.com>  Wed, 27 Oct 2021 18:08:28 +0000
+
+php-mail (1.4.1-1ubuntu1) impish; urgency=medium
+
+  * d/p/make-parseaddresslist-static.patch: Fix FTBFS in 4 tests
+    by not using parseAddressList() as a static function.
+
+ -- Bryce Harrington <bryce@canonical.com>  Fri, 18 Jun 2021 19:51:58 +0000
+
+php-mail (1.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Vcs URLs to Salsa.
+  * DH to version 12.
+  * Updated URLs to HTTPS.
+  * Rules-Requires-Root: no.
+  * Standards-Version: 4.5.0.
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 13 Feb 2020 13:44:11 +1100
+
+php-mail (1.3.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.3.0
+  * Bump standards version to 3.9.7
+  * Rebuild with pkg-php-tools >= 1.32 for the PHP 7.0 transition
+  * Drop all patches (Closes: #808615)
+
+ -- Prach Pongpanich <prach@debian.org>  Sun, 06 Mar 2016 14:27:07 +0700
+
+php-mail (1.2.0-7) unstable; urgency=medium
+
+  [ Thijs Kinkhorst ]
+  * Remove self from uploaders.
+
+  [ Prach Pongpanich ]
+  * Use pear run-tests instead of phpunit
+  * Add DEP-8 compliant tests
+  * Bump Standards-Version to 3.9.6
+
+ -- Prach Pongpanich <prachpub@gmail.com>  Fri, 03 Oct 2014 13:14:51 +0700
+
+php-mail (1.2.0-6) unstable; urgency=low
+
+  * Refresh patches/Fixes-unit-testing (Closes: #730316)
+  * Use phppear-substvar in control file
+  * Don't ship tests
+  * Bump Standards-Version to 3.9.5
+
+ -- Prach Pongpanich <prachpub@gmail.com>  Tue, 26 Nov 2013 00:40:18 +0700
+
+php-mail (1.2.0-5) unstable; urgency=low
+
+  [ Thomas Goirand ]
+  * Fix the fix of unit testing (Closes: #713780): fixes FTBFS.
+
+  [ Prach Pongpanich ]
+  * Use canonical URI in Vcs-* fields
+  * Switch debian/copyright to format 1.0
+  * Add myself as uploader
+  * Bump debhelper compat to 9
+  * Bump Standards-Version to 3.9.4
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 22 Jun 2013 15:15:35 +0000
+
+php-mail (1.2.0-4) unstable; urgency=low
+
+  * Fixes the smtp non-existant host unit testing script.
+  * Standards-Version: 3.9.3 (no-change).
+  * Activated unit testings.
+  * Fixed missing depends: php-net-smtp (Closes: #672393).
+  * Now using pkg-php-pear@lists.alioth.d.o as maintainer.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 10 May 2012 17:29:09 +0000
+
+php-mail (1.2.0-3) unstable; urgency=low
+
+  * Switching to debhelper 8 sequenceur and pkg-php-tools.
+  * Bumped Standards-Version.
+  * Changed Vcs fields to use Git on Alioth instead of SVN.
+  * Removed useless debian/dirs.
+  * Switched to source format 3.0 (quilt).
+  * Removed useless build-depends on quilt.
+  * Added a patch to remove the warning "Assigning the return value of new by
+  reference is deprecated" (Closes: #653544).
+  * removed useless debian/README.source.
+  * Switched debian/copyright to the DEP5 format.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 30 Dec 2011 01:09:23 +0800
+
+php-mail (1.2.0-2) unstable; urgency=low
+
+  * Fix bashism in debian/rules (Closes: #581459).
+
+ -- Thijs Kinkhorst <thijs@debian.org>  Sun, 16 May 2010 13:31:43 +0200
+
+php-mail (1.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Incorporates escapeshellcmd patch.
+    + Changed licence to BSD (closes: #332613).
+  * Checked for policy 3.8.4, changed section to php.
+
+ -- Thijs Kinkhorst <thijs@debian.org>  Sun, 09 May 2010 15:28:00 +0200
+
+php-mail (1.1.14-2) unstable; urgency=high
+
+  * Use escapeshellarg instead of escapeshellcmd to escape email addresses
+     on sendmail.php (Closes: #557121)
+     - Thanks to Dennis P. NIkolaenko <dennis@nikolaenko.ru> for the report
+
+ -- Raphael Geissert <geissert@debian.org>  Thu, 19 Nov 2009 12:48:44 -0600
+
+php-mail (1.1.14-1) unstable; urgency=low
+
+  [ Martin Lohmeier ]
+  * new upstream version (Closes: #421841)
+  * add debian/watch
+  * add Homepage to debian/control
+
+  [ Thijs Kinkhorst ]
+  * Make debian/copyright current.
+  * Make use of modern-day PEAR package building.
+
+ -- Thijs Kinkhorst <thijs@debian.org>  Sun, 04 May 2008 15:28:29 +0200
+
+php-mail (1.1.6-2) unstable; urgency=low
+
+  * Need to replace php4-pear (<< 4:4.4.0-0), yes the epoch matters.
+  * Update debian/copyright to make sure the license is correct, the
+    Debian maintainers are mentioned, the upstream copyright holder
+    is mentioned and the upstream location is quoted.
+
+ -- Adam Conrad <adconrad@0c3.net>  Fri, 29 Jul 2005 08:37:35 +1000
+
+php-mail (1.1.6-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Ondřej Surý <ondrej@sury.org>  Thu, 21 Jul 2005 09:45:07 +0200

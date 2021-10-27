@@ -1,0 +1,3 @@
+Test-Command: pear run-tests -r Mail-*/tests
+Restrictions: needs-recommends
+Depends: @, php-pear
